@@ -1,7 +1,25 @@
+/* This is a comment
+what you see below is a general selector, they're id selectors */
 h1{
     color: red;
     text-decoration: overline;
 }
 h2{
     text-decoration: underline;
+}
+
+span{
+    color: green;
+    font-weight: bold;
+}
+
+
+/*multiple selector*/
+p, div, h4{
+    font-style: italic;
+}
+
+/*universal selector*/
+*{
+    
 }

@@ -44,5 +44,11 @@ h1{
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 100px; /* space between dropdowns */
+    gap: 20px; /* space between dropdowns */
+}
+
+.verticalStack {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }

@@ -34,28 +34,31 @@
                 <input type="radio" id="temp" name="type" value="temp" onclick="typeRadio('temp')" />
                 <label for="temp">Temperature</label>
             </section>
-            <!-- Labels for FROM - TO -->
-            <section>
-                <label class="horizontalMargin" id="underline">From</label>
-                <label class="horizontalMargin" id="underline">To</label>
-            </section>
-            
-            <!-- Dropdown boxes FROM - TO -->
-            <section class="horizontalStack">
-                <select name="fromMeasurements">
-                    <option value="inches">inches</option>
-                    <option value="feet">feet</option>
-                    <option value="centimeters">centimeters</option>
-                    <option value="meters">meters</option>
-                </select>
 
-                <select name="toMeasurements">
-                    <option value="inches">inches</option>
-                    <option value="feet">feet</option>
-                    <option value="centimeters">centimeters</option>
-                    <option value="meters">meters</option>
-                </select>
+            <!-- Dropdown boxes FROM - TO with labels above -->
+            <section class="horizontalStack">
+                <div class="verticleStack">
+                    <label id="underline">From</label>
+                    <select name="fromMeasurements">
+                        <option value="inches">inches</option>
+                        <option value="feet">feet</option>
+                        <option value="centimeters">centimeters</option>
+                        <option value="meters">meters</option>
+                    </select>
+                    <input type="text" name="fname">
+                </div>
+                <div class="verticleStack">
+                    <label id="underline">To</label>
+                    <select name="toMeasurements">
+                        <option value="inches">inches</option>
+                        <option value="feet">feet</option>
+                        <option value="centimeters">centimeters</option>
+                        <option value="meters">meters</option>
+                    </select>
+                    <button type="button">Submit</button> 
+                </div>
             </section>
+
         </form>
         <script src="assignment03.js"></script>
     </body>

@@ -1,3 +1,4 @@
+/* Element selectors */
 *{
     font-family: Georgia;
     text-align: center;
@@ -12,10 +13,12 @@ h1{
          1px  1px 0 #000;
 }
 
+/* id selector(s) */
 #underline{
     text-decoration: underline;
 }
 
+/* Background and outlines */
 .background{
   background-color: rgb(64, 64, 64);
 }
@@ -30,25 +33,30 @@ h1{
   background-color: rgb(250, 250 ,250);
 }
 
+/* Spacing */
 .spacing{
   margin-block: 20px;
   padding-block: 10px;
 }
 
-.horizontalMargin{
-  margin-left: 100px;
-  margin-right: 100px;
+.spacingSmall{
+  margin-block: 5px;
+  padding-block: 5px;
 }
 
+/* Stacking */
 .horizontalStack {
     display: flex;
     justify-content: center;
-    align-items: center;
-    gap: 20px; /* space between dropdowns */
+    align-items: stretch;
+    gap: 50px; /* Space between columns */
 }
 
 .verticalStack {
+    margin-block: 10px;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: stretch;
+    text-align: left;
+    gap: 15px; /* Add this line for spacing between children */
 }

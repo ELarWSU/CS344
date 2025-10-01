@@ -37,28 +37,36 @@
 
             <!-- Dropdown boxes FROM - TO with labels above -->
             <section class="horizontalStack">
-                <div class="verticleStack">
+                <!-- Left hand side -->
+                <div class="verticalStack">
+
                     <label id="underline">From</label>
+
                     <select name="fromMeasurements">
                         <option value="inches">inches</option>
                         <option value="feet">feet</option>
                         <option value="centimeters">centimeters</option>
                         <option value="meters">meters</option>
                     </select>
-                    <input type="text" name="fname">
+
+                    <input type="number" id="fnameInput" oninput="checkNumber(this)">                
                 </div>
-                <div class="verticleStack">
+                <!-- Right hand side -->
+                <div class="verticalStack">
+
                     <label id="underline">To</label>
+
                     <select name="toMeasurements">
                         <option value="inches">inches</option>
                         <option value="feet">feet</option>
                         <option value="centimeters">centimeters</option>
                         <option value="meters">meters</option>
                     </select>
+
                     <button type="button">Submit</button> 
                 </div>
-            </section>
 
+            </section>
         </form>
         <script src="assignment03.js"></script>
     </body>

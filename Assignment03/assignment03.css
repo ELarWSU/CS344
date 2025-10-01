@@ -1,6 +1,9 @@
+*{
+    font-family: Georgia;
+    text-align: center;
+}
+
 h1{
-      text-align: center;
-      font-family: Georgia;
       color: rgb(250, 250, 250);
       text-shadow:
         -1px -1px 0 #000,  
@@ -9,9 +12,8 @@ h1{
          1px  1px 0 #000;
 }
 
-#GuiHeader{
-      text-align: center;
-      font-family: Georgia;
+#underline{
+    text-decoration: underline;
 }
 
 .background{
@@ -26,4 +28,21 @@ h1{
   margin: 40px auto;
   border-radius: 30px;
   background-color: rgb(250, 250 ,250);
+}
+
+.spacing{
+  margin-block: 20px;
+  padding-block: 10px;
+}
+
+.horizontalMargin{
+  margin-left: 100px;
+  margin-right: 100px;
+}
+
+.horizontalStack {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 100px; /* space between dropdowns */
 }

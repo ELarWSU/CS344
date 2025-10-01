@@ -1,15 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
+
     <head>
         <title>CS 344 HW 3</title>
         <meta charset="UTF-8">
         <link rel="stylesheet" href="assignment03.css">
         <meta name="author" content="Ethan Larson">
     </head>
+
     <body class = "background">
+
+        <!-- Website Header -->
         <h1>Homework 3</h1>
+
+        <!-- FORM -->
         <form class = "gui">
-            <h2 id="GuiHeader">Conversion Units</h2>
+            <!-- Header for FORM -->
+            <h2 id="underline">Conversion Units</h2>
+            <!-- Radio buttons for MEASUREMENT TYPE -->
+            <section class="spacing">
+                <input type="radio" id="len" name="type" value="len" onclick="typeRadio('len')" />
+                <label for="len">Length</label>
+
+                <input type="radio" id="weight" name="type" value="weight" onclick="typeRadio('weight')" />
+                <label for="weight">Weight</label>
+
+                <input type="radio" id="area" name="type" value="area" onclick="typeRadio('area')" />
+                <label for="area">Area</label>
+
+                <input type="radio" id="vol" name="type" value="vol" onclick="typeRadio('vol')" />
+                <label for="vol">Volume</label>
+
+                <input type="radio" id="temp" name="type" value="temp" onclick="typeRadio('temp')" />
+                <label for="temp">Temperature</label>
+            </section>
+            <!-- Labels for FROM - TO -->
+            <section>
+                <label class="horizontalMargin" id="underline">From</label>
+                <label class="horizontalMargin" id="underline">To</label>
+            </section>
+            
+            <!-- Dropdown boxes FROM - TO -->
+            <section class="horizontalStack">
+                <select name="fromMeasurements">
+                    <option value="inches">inches</option>
+                    <option value="feet">feet</option>
+                    <option value="centimeters">centimeters</option>
+                    <option value="meters">meters</option>
+                </select>
+
+                <select name="toMeasurements">
+                    <option value="inches">inches</option>
+                    <option value="feet">feet</option>
+                    <option value="centimeters">centimeters</option>
+                    <option value="meters">meters</option>
+                </select>
+            </section>
         </form>
         <script src="assignment03.js"></script>
     </body>

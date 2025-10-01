@@ -13,6 +13,15 @@ h1{
          1px  1px 0 #000;
 }
 
+button{
+  background-color: rgb(128, 64, 64);
+  color: rgb(250, 250, 250);
+  border: black;
+  border-radius: 5px;
+  size: 2em;
+  padding-block: 5px;
+}
+
 /* id selector(s) */
 #underline{
     text-decoration: underline;
@@ -24,6 +33,10 @@ h1{
 }
 
 .gui{
+  width: 90vw;           /* Use most of the viewport width */
+  max-width: 900px;     /* Optional: limit max width */
+  min-width: 600px;      /* Optional: minimum width */
+  font-size: 1.2em;
   border: 2px rgb(127, 0, 127);
   padding: 30px;
   width: 600px;
@@ -54,9 +67,19 @@ h1{
 
 .verticalStack {
     margin-block: 10px;
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: stretch;
     text-align: left;
     gap: 15px; /* Add this line for spacing between children */
+}
+
+#outputHeader{
+  padding-block: 20px;
+  margin-block: 20px;
+  border-radius: 8px;
+  border-color: rgb(64, 64, 64);
+  border-style: solid;
+  border-radius: 6px;
 }

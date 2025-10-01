@@ -19,7 +19,7 @@
             <h2 id="underline">Conversion Units</h2>
             <!-- Radio buttons for MEASUREMENT TYPE -->
             <section class="spacing">
-                <input type="radio" id="len" name="type" value="len" onclick="typeRadio('len')" />
+                <input type="radio" id="len" name="type" value="len" onclick="typeRadio('len')" checked />
                 <label for="len">Length</label>
 
                 <input type="radio" id="weight" name="type" value="weight" onclick="typeRadio('weight')" />
@@ -49,7 +49,7 @@
                         <option value="meters">meters</option>
                     </select>
 
-                    <input type="number" id="fnameInput" oninput="checkNumber(this)">                
+                    <input type="number" id="fnameInput" min="0">                
                 </div>
                 <!-- Right hand side -->
                 <div class="verticalStack">
@@ -65,9 +65,10 @@
 
                     <button type="button">Submit</button> 
                 </div>
-
             </section>
+            <h4 id="outputHeader">Output</h4>
         </form>
+
         <script src="assignment03.js"></script>
     </body>
 </html>

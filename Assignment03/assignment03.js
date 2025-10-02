@@ -33,19 +33,28 @@ function populateDropdowns(type) {
     }
 }
 
-function calculate(){
-    const inputValue = parseFloat(document.getElementById("inputValue").value);
+function calculate() {
+
+    const lengthToMeters = {
+    inches: 0.0254,
+    feet: 0.3048,
+    centimeters: 0.01,
+    meters: 1
+    };
+
+    const inputValue = parseFloat(document.getElementById("input").value);
     const fromUnit = document.getElementById("fromMeasurements").value;
     const toUnit = document.getElementById("toMeasurements").value;
-    const type = document.getElementById("typeSelect").value;
-    let outputValue;
+    const result = document.getElementById("outputHeader");
+    
+    if (isNaN(inputValue) || inputValue < 0) {
+        result.textContent = "Error: Please enter a number greater than 0";
+        return;
+    }
 
-    if (inputValue < 0 || inputValue === null || typeof inputValue != "number") {
-        alert("Please enter a valid number.");
-        return;
-    }
-    else{
-        alert("Input accepted");
-        return;
-    }
+    const valueInMeters = inputValue * lengthToMeters[fromUnit];
+    const finalNum = valueInMeters / lengthToMeters[toUnit];
+
+  result.textContent = `${inputValue} ${fromUnit} = ${finalNum} ${toUnit}`;
+
 }

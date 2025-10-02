@@ -16,22 +16,22 @@
         <!-- FORM -->
         <form class = "gui">
             <!-- Header for FORM -->
-            <h2 id="underline">Conversion Units</h2>
+            <h2 id="guiHeader">Conversion Units</h2>
             <!-- Radio buttons for MEASUREMENT TYPE -->
             <section class="spacing">
-                <input type="radio" id="len" name="type" value="len" onclick="typeRadio('len')" checked />
+                <input type="radio" id="len" name="type" value="len" onclick="populateDropdowns('len')" checked />
                 <label for="len">Length</label>
 
-                <input type="radio" id="weight" name="type" value="weight" onclick="typeRadio('weight')" />
+                <input type="radio" id="weight" name="type" value="weight" onclick="populateDropdowns('weight')" />
                 <label for="weight">Weight</label>
 
-                <input type="radio" id="area" name="type" value="area" onclick="typeRadio('area')" />
+                <input type="radio" id="area" name="type" value="area" onclick="populateDropdowns('area')" />
                 <label for="area">Area</label>
 
-                <input type="radio" id="vol" name="type" value="vol" onclick="typeRadio('vol')" />
+                <input type="radio" id="vol" name="type" value="vol" onclick="populateDropdowns('vol')" />
                 <label for="vol">Volume</label>
 
-                <input type="radio" id="temp" name="type" value="temp" onclick="typeRadio('temp')" />
+                <input type="radio" id="temp" name="type" value="temp" onclick="populateDropdowns('temp')" />
                 <label for="temp">Temperature</label>
             </section>
 
@@ -40,9 +40,9 @@
                 <!-- Left hand side -->
                 <div class="verticalStack">
 
-                    <label id="underline">From</label>
+                    <label class="selectLabel">From</label>
 
-                    <select name="fromMeasurements">
+                    <select name="fromMeasurements" id = "fromMeasurements">
                         <option value="inches">inches</option>
                         <option value="feet">feet</option>
                         <option value="centimeters">centimeters</option>
@@ -54,21 +54,20 @@
                 <!-- Right hand side -->
                 <div class="verticalStack">
 
-                    <label id="underline">To</label>
+                    <label class="selectLabel">To</label>
 
-                    <select name="toMeasurements">
+                    <select name="toMeasurements" id = "toMeasurements">
                         <option value="inches">inches</option>
                         <option value="feet">feet</option>
                         <option value="centimeters">centimeters</option>
                         <option value="meters">meters</option>
                     </select>
 
-                    <button type="button">Submit</button> 
+                    <button onclick="calculate()" type="button" >Submit</button> 
                 </div>
             </section>
             <h4 id="outputHeader">Output</h4>
         </form>
-
         <script src="assignment03.js"></script>
     </body>
 </html>

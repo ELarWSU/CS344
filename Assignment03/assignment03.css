@@ -22,21 +22,29 @@ button{
   padding-block: 5px;
 }
 
-/* id selector(s) */
-#underline{
-    text-decoration: underline;
+select{
+  font-size: 1.05em;
 }
 
-/* Background and outlines */
+input, button {
+  font-size: 1.2em;
+  
+}
+
+/* Class selectors */
+.selectLabel{
+  font-size: 1.05em;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
 .background{
   background-color: rgb(64, 64, 64);
 }
 
 .gui{
-  width: 90vw;           /* Use most of the viewport width */
-  max-width: 900px;     /* Optional: limit max width */
-  min-width: 600px;      /* Optional: minimum width */
-  font-size: 1.2em;
+  width: 100vw;
+  font-size: 1.4em;
   border: 2px rgb(127, 0, 127);
   padding: 30px;
   width: 600px;
@@ -45,24 +53,16 @@ button{
   border-radius: 30px;
   background-color: rgb(250, 250 ,250);
 }
-
-/* Spacing */
 .spacing{
   margin-block: 20px;
   padding-block: 10px;
 }
 
-.spacingSmall{
-  margin-block: 5px;
-  padding-block: 5px;
-}
-
-/* Stacking */
 .horizontalStack {
     display: flex;
     justify-content: center;
     align-items: stretch;
-    gap: 50px; /* Space between columns */
+    gap: 50px;
 }
 
 .verticalStack {
@@ -72,7 +72,12 @@ button{
     flex-direction: column;
     align-items: stretch;
     text-align: left;
-    gap: 15px; /* Add this line for spacing between children */
+    gap: 15px; 
+}
+
+/* id selectors */
+#guiHeader{
+  text-decoration: underline;
 }
 
 #outputHeader{

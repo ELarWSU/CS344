@@ -11,6 +11,7 @@ table{
     border-color : black;
     border-width : 8px;
     border-radius: 9px;
+    border-spacing: 16px;
     border-style : solid;
     text-align: center;
 }

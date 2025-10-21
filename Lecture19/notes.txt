@@ -1,0 +1,12 @@
+php FORM IS 
+
+get versu post,
+
+get)
+
+get shows you the variables name in the url so it can be bookedmarked
+
+post)
+
+post shows you nothing in the URL for sensitive information like credit cards and etc
+<form action='welcome.php" method = "POST">

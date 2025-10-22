@@ -6,7 +6,7 @@ let boardY = 7;
 let winLength = 4;
 let tableElem = document.getElementById("board");
 let xWinCount = 0;
-let yWinCount = 0;
+let oWinCount = 0;
 let moveCount = 0;
 
 let t = "X";
@@ -143,8 +143,8 @@ function winGame(strWinner){
         xWinCount += 1;
         document.getElementById("xWinCount").innerText = xWinCount;
     } else {
-        yWinCount += 1;
-        document.getElementById("yWinCount").innerText = yWinCount;
+        oWinCount += 1;
+        document.getElementById("oWinCount").innerText = oWinCount;
     }
     drawBoard();
 }

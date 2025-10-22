@@ -1,3 +1,7 @@
+*{
+    text-align: center;
+}
+
 td {
     border: solid black;
     border-width: 1px;
@@ -8,6 +12,8 @@ td {
 
 table {
     border-collapse: collapse;
+    /* centers table with text*/
+    margin: 0 auto; 
 }
 
 td.hovered {
@@ -24,4 +30,21 @@ td.o {
     background-color: lightgreen;
     text-align: center;
     font-size: 24px;
+}
+
+div{
+    background-color: black;
+    color: white;
+    margin: 20px;
+    padding: 10px;
+}
+
+button{
+    margin: 10px;
+    font-size: 1.2em;
+}
+
+label{
+    color:darkturquoise;
+    font-size: 1.2em;
 }

@@ -7,6 +7,7 @@ let winLength = 4;
 let tableElem = document.getElementById("board");
 let xWinCount = 0;
 let yWinCount = 0;
+let moveCount = 0;
 
 let t = "X";
 let clicked = false;
@@ -45,8 +46,11 @@ function draw(e) {
         let x = parseInt(coords[0]);
         let y = parseInt(coords[1]);
         board[x][y] = t;
+
         //Check win after we draw
         checkWin();
+        checkDraw();
+
         if (t === "X") {
             t = "O";
         } else {
@@ -58,13 +62,13 @@ function draw(e) {
 
 // Builds the board
 function drawBoard() {
-    // Emptyies the board html elements and 2d array
+    // Empties the board html elements and 2d array
     tableElem.innerHTML = "";
     board = [];
     //Resets game variables
     clicked = false;
     settled = false;
-    let t = "X";
+    t = "X";
 
 
     //Draw board by adding a new row x amount of times
@@ -74,7 +78,7 @@ function drawBoard() {
         //Draw cells by adding a new cell y amount of times (col height)
         for (let j = 0; j < boardY; j++) {
             let square = tableElem.rows[i].insertCell();
-            square.id = '' + i + ' ' + j; //Adds id to html elem to idenity coords
+            square.id = '' + i + ' ' + j; //Adds id to html elem to identify coords
             board[i][j] = "";
             square.addEventListener("mouseenter", hightlight);
             square.addEventListener("mouseleave", back);
@@ -92,23 +96,9 @@ function checkWin() {
             //if empty, skip
             if (board[i][j] === "") {
                 continue;
-            }
-            //Checks for win
-            if (checkHorizontal(i, j, board[i][j]) || checkVertical(i, j, board[i][j])) {
-                //alert
-                alert(board[i][j] + " wins!");
-                //update x's win count
-                if (board[i][j] === "X") {
-                    xWinCount++;
-                    document.getElementById("xWinCount").innerText = xWinCount;
-                //update y's win count
-                } else {
-                    yWinCount++;
-                    document.getElementById("yWinCount").innerText = yWinCount;
-                }
-                //draw
-                drawBoard();
-                //exit
+            } //Check for win conditions
+            else if(checkHorizontal(i, j, board[i][j]) || checkVertical(i, j, board[i][j])) {
+                winGame(board[i][j]);
                 return;
             }
         }
@@ -143,6 +133,30 @@ function checkVertical(x, y, val) {
     }
 
     return true;
+}
+
+//What to do when we win the game
+function winGame(strWinner){
+    moveCount = 0;
+    alert(strWinner + " wins!");
+    if (strWinner === "X") {
+        xWinCount += 1;
+        document.getElementById("xWinCount").innerText = xWinCount;
+    } else {
+        yWinCount += 1;
+        document.getElementById("yWinCount").innerText = yWinCount;
+    }
+    drawBoard();
+}
+
+//Checks to see if draw, if so
+function checkDraw(){
+    moveCount += 1;
+    if (moveCount === boardX * boardY){
+        moveCount = 0;
+        alert("It's a draw!");
+        drawBoard();
+    }
 }
 
 //Starts by drawing the board

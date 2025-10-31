@@ -24,7 +24,7 @@ function dayTask(intDay, strDay) {
         let strCell = tableRow.cells[intDay - 1].textContent;
         //If cell is empty, populate with message and exit
         if (strCell === "") {
-            tableRow.cells[intDay - 1].textContent = promptMessage;
+            tableRow.cells[intDay - 1].textContent = strMessage;
             return;
         }
 

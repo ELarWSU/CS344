@@ -8,21 +8,19 @@
     </head>
     <body>
         <h1>Weekly Schedule</h1>
-        <table>
-            <tr>
-                <th class="dateHeaders" onclick="dayTask(1, 'Sunday')">Sunday</th>
-                <th class="dateHeaders" onclick="dayTask(2, 'Monday')">Monday</th>
-                <th class="dateHeaders" onclick="dayTask(3, 'Tuesday')">Tuesday</th>
-                <th class="dateHeaders" onclick="dayTask(4, 'Wednesday')">Wednesday</th>
-                <th class="dateHeaders" onclick="dayTask(5, 'Thursday')">Thursday</th>
-                <th class="dateHeaders" onclick="dayTask(6, 'Friday')">Friday</th>
-                <th class="dateHeaders" onclick="dayTask(7, 'Saturday')">Saturday</th>
-            </tr>
-                <tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-            </tr>
-            </tr>
-                <tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-            </tr>
-        </table>
+        <form action="assignment04.php" method="post">
+            <table>
+                <tr>
+                    <th class="dateHeaders" onclick="dayTask(1, 'Sunday')">Sunday</th>
+                    <th class="dateHeaders" onclick="dayTask(2, 'Monday')">Monday</th>
+                    <th class="dateHeaders" onclick="dayTask(3, 'Tuesday')">Tuesday</th>
+                    <th class="dateHeaders" onclick="dayTask(4, 'Wednesday')">Wednesday</th>
+                    <th class="dateHeaders" onclick="dayTask(5, 'Thursday')">Thursday</th>
+                    <th class="dateHeaders" onclick="dayTask(6, 'Friday')">Friday</th>
+                    <th class="dateHeaders" onclick="dayTask(7, 'Saturday')">Saturday</th>
+                </tr>
+            </table>
+            <button type="submit">Save Changes to Tasks</button>
+        </form>
     </body>
 </html>
